@@ -9,7 +9,19 @@ function App() {
   const calculate = (e)=>{
     e.preventDefault()
     console.log(firstName,secondName);
-    setResult("hai")
+    const name = Array.from(new Set(firstName.toLowerCase().split("")))
+    const name2 =Array.from(new Set(secondName.toLowerCase().split("")))
+    let score = Math.abs(name2.length - name.length) / 5;
+    if(name2.length === name.length){
+      score = score+1;
+    }
+    name.forEach((ch)=>{
+      if(name2.includes(ch)){
+        score++
+      }
+    })
+    let finalScore = ((score/name.length) * 100)>=100?100:((score/name.length) * 100).toFixed(0)
+    setResult(finalScore)
   }
   return (
     <div className="App">
