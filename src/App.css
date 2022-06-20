@@ -1,38 +1,130 @@
-.App {
-  text-align: center;
+.App
+{
+  background-image: url(./assets/backgroung.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Red Rose', cursive;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header
+{
+  display: flex;
+  justify-content: center;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1
+{
+font-style: normal;
+font-size: 48px;
+color: #FFFFFF;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.logo
+{
+position: absolute;
+left: 3.91%;
+right: 88.83%;
+top: 2.78%;
+}
+.main_container
+{
+  display: flex;
+  height: 100vh;
+}
+.left_container
+{
+  display: flex;
+  flex-direction:column;
+  width: 321px;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 4px 4px rgba(255, 0, 0, 0.25);
+  align-items: center;
+}
+form
+{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px;
+}
+.textbox{
+  width: 229px;
+  height: 35px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0px 4px 4px rgba(255, 83, 83, 0.25);
+  border-radius: 10px;
+  text-align: center;
+  font-family: 'Red Rose', cursive;
+  font-weight: 700;
+  font-size: 18px;
+  font-style: normal;
+  color: #000000;
+}
+button
+{
+  width: 200px;
+  height: 35px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  border-color: white;
+  font-family: 'Red Rose';
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+  font-style: normal;
+}
+.right_container
+{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-left: 150px;
+  margin-top: 150px;
+
+}
+@media screen and (max-width: 900px) 
+{
+  .logo{
+    position: static;
+  }
+  .right_container
+  {
+    margin-left: 80px;
+    margin-top: 150px;
+   
+  }
+}
+@media screen and (max-width: 390px) 
+{
+  h1
+{
+font-style: normal;
+font-size: 20px;
+color: #FFFFFF;
+padding: 15px;
 }
 
-.App-link {
-  color: #61dafb;
+.main_container
+{
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
 }
+.right_container
+{
+  flex-direction: column;
+  margin-left: 0;
+  margin-top: 0;
+  padding: 10px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+form
+{
+  gap: 20px;
+}
+button
+{
+  margin: 30px;
+}
 }
