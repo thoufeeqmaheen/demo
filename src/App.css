@@ -82,6 +82,11 @@ button
   margin-top: 150px;
 
 }
+result
+{
+  position: absolute;
+  
+}
 @media screen and (max-width: 900px) 
 {
   .logo{

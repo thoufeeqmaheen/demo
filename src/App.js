@@ -18,8 +18,7 @@ function App() {
     name.forEach((ch)=>{
       if(name2.includes(ch)){
         score++
-      }
-    })
+      } })
     let finalScore = ((score/name.length) * 100)>=100?100:((score/name.length) * 100).toFixed(0)
     setResult(finalScore)
   }
@@ -36,8 +35,8 @@ function App() {
                 <input value={firstName} onChange={e=>setFirstName(e.target.value)} className='textbox' type="text" placeholder='your name' />
                 <input value={secondName} onChange={e=>setSecondName(e.target.value)} className='textbox' type="text" placeholder='crush name' />
                 <h2>LOVE METER</h2>
-                {result}
-                <img src={love}/>
+               <div className='result'>{result}</div>
+                <img className='biglove' src={love}/>
                 <button>SUMBIT</button>
               </form>
             </div>
